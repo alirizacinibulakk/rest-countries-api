@@ -1,4 +1,4 @@
-import './index.css'
+import './app.css'
 
 const countryList = [
   {
@@ -53050,7 +53050,7 @@ function App() {
     <>
       <header>
         <h1>Where in the world</h1>
-        <p>Dark mode</p>
+        <p><img src="../public/images/moon-light.png" alt="" /> Dark mode</p>
       </header>
       <div className="countries">
         {countryList.map(country => (
@@ -53067,8 +53067,15 @@ export default App
 function RestCountries({ country }){
   return (
     <>
-      <div className="item">,
-        <img src="{country.flags.png}" alt="" />
+      <div className="item">
+        <img src={country.flags.png} alt="" />
+        <div className="item-content">
+          <p>{country.name.common}</p>
+          <p>Population: <span>{country.population}</span></p>
+          <p>Region: <span>{country.region}</span>
+          </p>
+          <p>Capital: <span>{country.capital}</span></p>
+        </div>
       </div>
     </>
   )

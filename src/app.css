@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    margin: 0 auto;
+    font-family: "Nunito Sans", serif;
+    background-color: #FAFAFA;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;  
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/*
+9. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 16px;
+    padding-block: 30px;
+    background-color: white;
+    box-shadow: 0px 2px 4px 0px #0000000E;
+    margin-bottom: 24px;
+}
+header h1{
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #111517;
+}
+header p{
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16.37px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #111517;
+}
+header p img{
+    width: 12px;
+    height: 13px;
+}
+.countries{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 40px;
+    place-items: center;
+}
+.item{
+    box-shadow: 0px 0px 7px 2px #00000008;
+    background-color: white;
+    border-radius: 5px;
+}
+.item img{
+    width: 264px;
+    height: 160px;
+    margin-bottom: 24px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.item-content{
+    padding-left: 24px;
+    margin-bottom: 46px;
+}
+.item-content p:first-child{
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 26px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;    
+    margin-bottom: 16px;
+}
+.item-content p:nth-child(2){
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 8px;   
+}
+.item-content p:nth-child(3){
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none; 
+    margin-bottom: 8px;   
+}
+.item-content p:nth-child(4){
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;    
+}
+.item-content p span{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;    
+}
