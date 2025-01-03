@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './app.css'
 
 const countryList = [
@@ -53046,14 +53047,32 @@ const countryList = [
 ]
   
 function App() {
+  const [country, setCountry] = useState("");
+  const [region, setRegion] = useState("");
+  function handleChange(e){
+    setCountry(e.target.value);
+  }
+  function handleSelectChange(e){
+    setRegion(e.target.value);
+  }
+  const regions = Array.from(new Set(countryList.map(x => x.region)))
   return (
     <>
       <header>
         <h1>Where in the world</h1>
         <p><img src="../public/images/moon-light.png" alt="" /> Dark mode</p>
       </header>
+      <div className='input-select'>
+        <input className='search-country' type="text" placeholder='Search bu country...'onChange={handleChange}/>
+        <select onChange={handleSelectChange}>
+          <option value="">Filter by region</option>
+          {regions.map(r => (
+            <option key={r} value={r}>{r}</option>
+          ))}
+        </select>
+      </div>
       <div className="countries">
-        {countryList.map(country => (
+        {countryList.filter(x => x.name.common.toLowerCase().includes(country.toLowerCase()) && x.region.includes(region)).map(country => (
             <RestCountries key= {country.name.common} country= {country}/>
           )) 
         }
